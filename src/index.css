@@ -1,13 +1,360 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Amiko&display=swap');
+/*font-family: 'Amiko', sans-serif;*/
+
+*{
+  margin:0;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background:url('https://i.ibb.co/C71hg9W/Web-1920-3.png')no-repeat;
+  background-size: cover;
+}
+
+img[alt="profile-pic"]{
+  height: 4.5em;
+  width: 4.5em;
+}
+
+.navbar{
+  font-family: 'Amiko', sans-serif;
+}
+
+.profileInfo{
+  margin:1em 12em;
+}
+
+.profileInfo #name{
+  font-size: 2em;
+  margin:0.7em 0.5em;
+  position: absolute;
+}
+
+.profileInfo .fa-chevron-down{
+  margin: 2.3em 11em;
+  position: absolute;
+  cursor: pointer;
+}
+
+.profileInfo img[alt="profile-pic"], #name, .fa-chevron-down{
+  display: inline;
+}
+
+.navbar ul{
+  float: right;
+  margin: -4.5em 6em;
+}
+
+.navbar ul li{
+  display: inline;
+  font-weight: bold;
+  font-size: 2em;
+  margin-left: 2em;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: black;
+  transition: ease-in-out 0.3s;
+}
+
+.navbar ul li a:hover{
+  color: rgb(0, 255, 128);
+  cursor: pointer;
+}
+
+
+/*Header*/
+
+.header{
+  margin: 11em 16.6em;
+  line-height: 7em;
+  float: right;
+}
+
+#app-heading{
+font-family: 'Work Sans', sans-serif;
+font-size:6.2em;
+color: #02BF6D;
+}
+
+
+#app-description{
+  font-size: 2.2em;
+  font-family: 'Amiko', sans-serif;
+}
+
+.create-invoice-btn{
+  background-color:#02BF6D;
+  color: white;
+  border:transparent;
+  border-radius: 0.5em;
+  font-size: 1.7em;
+  font-family: 'Amiko', sans-serif;
+  text-align: center;
+  padding:0rem 2rem;
+  transition: all 0.3s;
+}
+
+.dissapear,#dissapear{
+  display: none;
+}
+
+.create-invoice-btn:hover{
+background:#00FE90;
+cursor: pointer;
+}
+
+/*form*/
+form::-webkit-scrollbar {
+  width: 10px;
+}
+
+form::-webkit-scrollbar-track {
+border-radius: 10px;
+background-color: transparent; 
+}
+
+form::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background-color: #5e5e5e;
+height: 2em;
+}
+
+Label{
+  position: relative;
+  height: 1em;
+}
+
+  Form{
+    background:white;
+    width: 29em;
+    height:35em;
+    border: transparent; 
+    border-radius:20px;
+    box-shadow:2px 2px 12px 2px rgba(0, 0, 0, 0.41);
+    margin:-8em -50%;
+    font-family: 'Amiko', sans-serif;
+    padding: 2em 2em;
+    overflow-y:scroll;
+  }
+
+  Input{
+   margin: -2em 0;
+
+  }
+
+  input[type="date"]{
+  float: left;
+    height: 2em;
+    width: 10em;
+    outline: none;
+  }
+ 
+  .hide{background-color: black;}
+
+  .invContainer{
+    width:26em;
+    background:white;
+    padding:1em 2em;
+    float: right;
+    margin: -6em 110%;
+    border: 1px solid black;
+    line-height: 1.5em;
+  }
+
+.invContainer  h2{
+    font-family: 'Work Sans', sans-serif;
+  }
+
+.invContainer  p{
+    font-family: 'Amiko', sans-serif;
+  }
+
+  strong{
+    font-size:0.7em;
+    color: #5e5e5e;
+  }
+
+  button[name="downloadbutton"]{
+        background-color:#02BF6D;
+        color: white;
+        border:transparent;
+        border-radius: 0.5em;
+        font-size: 1.4em;
+        font-family: 'Amiko', sans-serif;
+        text-align: center;
+        width: 80%;
+        padding: 1rem 0rem;
+        transition: all 0.3s;
+        margin:1em 2em;
+  }
+
+
+button[name="downloadbutton"]:hover{
+background:#00FE90;
+}
+
+
+  .submit-invioce{
+  font-size: 2rem;
+  padding:0.5em 0em;
+  color:white;
+  background: #00e849;
+  border-radius: 0.7rem;
+  border: transparent;
+  margin: 2em 0.2em;
+  width: 100%;
+  }
+
+/*footer*/
+
+footer{
+  clear: both;
+  text-align: center;
+  font-family: 'Amiko', sans-serif;
+  position: absolute;
+  width: 100%;
+ bottom:2%;
+  overflow: hidden;
+}
+
+footer a{
+  color: #02BF6D;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .invContainer{
+    width:26em;
+    padding:0.8em 2em;
+    margin: -11em 70%;
+    line-height: 1.1em;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  
+  #app-heading{
+    font-family: 'Work Sans', sans-serif;
+    font-size:5em;
+    color: #02BF6D;
+    }
+    
+    
+    #app-description{
+      font-size: 1.2em;
+      font-family: 'Amiko', sans-serif;
+    }
+    
+    .create-invoice-btn{
+      background-color:#02BF6D;
+      font-size: 1.3em;
+      width: 12em;
+      height: 2em;
+      padding: 0 0 5em  0;
+    }
+
+footer{
+ bottom:10%;
+  overflow: hidden;
+}
+
+}
+
+@media screen and (max-width: 1366px) {
+  footer{
+ float:left;
+ bottom: 18%;
+   }
+
+
+   Form{
+    width: 24em;
+    height:30em;
+    margin:-10em -50%;
+    
+  }
+   
+   .invContainer{
+    width:26em;
+    padding:0.4em 2em;
+    margin: -12em 70%;
+    line-height: 1em;
+  }
+
+.invContainer  h2{
+    font-size: 1.7em;
+  }
+
+.invContainer  p{
+    font-size: 0.85em;
+  }
+
+  strong{
+    font-size:1em;
+    color: #5e5e5e;
+  }
+
+  button[name="downloadbutton"]{
+    font-size: 1.2em;
+    width: 80%;
+    padding: 1rem 0rem;
+    margin:1em 2em;
+}
+
+
+.create-invoice-btn{
+  font-size: 1.4em;
+  width: 12em;
+  height: 3em;
+  padding: 0 0 4.5em  0;
+}
+
+}
+
+
+@media screen and (max-width: 1280px) {
+  .navbar ul li{
+    font-size: 1.5em;
+    margin-left: 1.9em;
+  }
+
+  .invContainer{
+    width:25em;
+    padding:0.3em 1.9em;
+    margin: -12em 40%;
+    line-height: 0.9em;
+  }
+
+.invContainer  h2{
+    font-size: 1.6em;
+  }
+
+.invContainer  p{
+    font-size: 0.75em;
+  }
+
+  strong{
+    font-size:0.9em;
+    color: #5e5e5e;
+  }
+
+  button[name="downloadbutton"]{
+    font-size: 1.2em;
+    width: 80%;
+    padding: 0.9rem 0rem;
+    margin:1em 2em;
+}
+
+footer{
+  float:left;
+  bottom: 23%;
+  font-size: 0.8rem;
+    }
+
 }

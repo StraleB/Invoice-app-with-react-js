@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ Component } from 'react';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import InvoiceContextProvider from './context/invoiceContext';
 
-function App() {
+
+
+export default class App extends Component {
+
+  render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <InvoiceContextProvider>
+    <Navbar/>
+    <Header/>
+    </InvoiceContextProvider>
+    <footer>
+      created by <a href="https://www.linkedin.com/in/straleb/">StraleB</a><br/>
+      &copy;2020
+    </footer>
     </div>
   );
 }
+}
 
-export default App;
